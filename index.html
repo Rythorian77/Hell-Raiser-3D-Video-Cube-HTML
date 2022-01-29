@@ -1,0 +1,101 @@
+<!--Created by: Justin L. Ross || May be used for educational purposes and non-profit-->
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+
+<head>
+<meta charset="UTF-8" />
+<title>3D HellRaiser Soul Collector</title>
+<link rel="stylesheet" href="css/pinhead.css" />
+</head>
+
+<body>
+
+<figure class="swing">
+	<img src="https://www.freeiconspng.com/uploads/noose-png-3.png" width="220" alt="Vector Png Noose" style="margin-top:-190px;" >
+</figure>
+<!--Wrapper-->
+<div class="wrapperMix">
+<!--The Lament Configuration Images for Box-->
+<div class="box">
+
+	<div class="shell_front">
+		<img src="img/hell1.jpg"  class="image">
+	</div>
+
+	<div class="shell_back">
+		<img src="img/hell1.jpg"  class="image">
+	</div>
+
+	<div class="shell_left">
+		<img src="img/hell3.jpg"  class="image">
+	</div>
+
+	<div class="shell_right">
+		<img src="img/hell4.jpg"  class="image">
+	</div>
+
+	<div class="shell_top">
+		<img src="img/hell2.jpg"  class="image">
+	</div>
+
+	<div class="shell_bottom">
+		<img src="img/hell6.jpg"  class="image">
+	</div>
+
+	<!--Inner Video Core of Cube & Images-->
+	<span class="core_front">
+		  <div class="videoWrapper">
+             <a><iframe src="hellvid.mp4" id="zoom" allow="autoplay;" autoplay="1" frameborder="2" allowfullscreen style="border:1px solid red;"></iframe></a>
+          </div>
+	</span>
+	<span class="core_back">
+		  <div class="videoWrapper">
+             <a><iframe src="hellvid2.mp4" id="zoom" allow="autoplay;" autoplay="1" frameborder="2" allowfullscreen style="border:1px solid red;"></iframe></a>
+          </div>
+	</span>
+	<span class="core_left">
+	 <div class="videoWrapper">
+             <a><iframe src="hellvid3.mp4" id="zoom" allow="autoplay;" autoplay="1" frameborder="2" allowfullscreen style="border:1px solid red;"></iframe></a>
+          </div>
+	</span>
+	<span class="core_right">
+		 <div class="videoWrapper">
+             <a><iframe src="hellvid4.mp4" id="zoom" allow="autoplay;"  autoplay="1" frameborder="2" allowfullscreen style="border:1px solid red;"></iframe></a>
+          </div>
+	</span>
+	<span class="core_top">
+			 <div class="videoWrapper">
+             <a><iframe src="hellvid5.mp4" id="zoom" allow="autoplay;" autoplay="1" frameborder="2" allowfullscreen style="border:1px solid red;"></iframe></a>
+          </div>
+	</span>
+	<span class="core_bottom">
+		 <div class="videoWrapper">
+             <a><iframe src="hellvid6.mp4" id="zoom" allow="autoplay;" autoplay="1" frameborder="2" allowfullscreen aria-controls="" style="border:1px solid red;"></iframe></a>
+          </div>
+	</span>
+</div>
+</div>
+
+<div style="text-align:center;clear:both">
+
+</div>
+<script>
+	// Get the iframe
+const iFrame = document.getElementById('zoom');
+
+// Let's say that you want to access a button with the ID `'myButton'`,
+// you can access via the following code:
+const buttonInIFrame = iFrame.contentWindow.document.getElementById('myButton');
+
+// If you need to call a function in the iframe, you can call it as follows:
+iFrame.contentWindow.yourFunction();
+</script>
+
+<script>
+	document.getElementsByTagName("zoom")[0].className = "fullScreen";
+</script>
+</body>
+
+</html>
+

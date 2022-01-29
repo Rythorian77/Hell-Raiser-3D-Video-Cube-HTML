@@ -1,0 +1,183 @@
+html{
+	 background-image: url("/img/drop.jpg");
+     background-repeat: no-repeat, repeat;
+     background-size: 100%;
+     background-width: 50%;
+}
+
+.wrapperMix{
+	width: 650px;
+	height: 200px;
+	margin: 150px 360px;
+	position: relative;
+	
+}
+
+.box{
+	width: 300px;
+	height: 300px;
+	margin-left: 50px;
+	-webkit-animation: rotate 50s infinite;
+    animation-timing-function: linear;
+	transform-style: preserve-3d;
+	transform: rotateX(-30deg) rotateY(-80deg);
+
+}
+@-webkit-keyframes rotate{
+	from{transform: rotateX(0deg) rotateY(0deg);}
+	to{transform: rotateX(360deg) rotateY(360deg);}
+}
+.box div{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	opacity: 0.7;
+	transition: all .3s;
+}
+
+.image{
+	width: 200px;
+	height: 200px;
+}
+.box .shell_front{
+	transform: rotateY(0deg) translateZ(100px);
+}
+.box .shell_back{
+	transform: translateZ(-100px) rotateY(180deg);
+}
+.box .shell_left{
+	transform: rotateY(90deg) translateZ(100px);
+}
+.box .shell_right{
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.box .shell_top{
+	transform: rotateX(90deg) translateZ(100px);
+}
+.box .shell_bottom{
+	transform: rotateX(-90deg) translateZ(100px);
+}
+/*Span Section*/
+.box span{
+	display: black;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.box .core_pic{
+	width: 100px;
+	height: 100px;
+}
+.box .core_front{
+	transform: rotateY(0deg) translateZ(50px);
+}
+.box .core_back{
+	transform: translateZ(-50px) rotateY(180deg);
+}
+.box .core_left{
+	transform: rotateY(90deg) translateZ(50px);
+}
+.box .core_right{
+	transform: rotateY(-90deg) translateZ(50px);
+}
+.box .core_top{
+	transform: rotateX(90deg) translateZ(50px);
+}
+.box .core_bottom{
+	transform: rotateX(-90deg) translateZ(50px);
+}
+
+ /*Outer Hover*/
+.box:hover .shell_front{
+	transform: rotateY(0deg) translateZ(200px);
+}
+.box:hover .shell_back{
+	transform: translateZ(-200px) rotateY(180deg);
+}
+.box:hover .shell_left{
+	transform: rotateY(90deg) translateZ(200px);
+}
+.box:hover .shell_right{
+	transform: rotateY(-90deg) translateZ(200px);
+}
+.box:hover .shell_top{
+	transform: rotateX(90deg) translateZ(200px);
+}
+.box:hover .shell_bottom{
+	transform: rotateX(-90deg) translateZ(200px);
+}
+
+/*Video Wrappers For Internal Core*/
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 40%;
+}
+
+/*Video Zoom for Core*/
+#zoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+#zoom:hover {
+  transform: scale(3.5);
+}
+
+.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*This is the rope swing*/
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.swing:after{
+    content: '';
+    position: absolute;
+    width: 20px; height: 20px;
+    border: 1px solid #999;
+    top: -200px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+/* nail */
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
